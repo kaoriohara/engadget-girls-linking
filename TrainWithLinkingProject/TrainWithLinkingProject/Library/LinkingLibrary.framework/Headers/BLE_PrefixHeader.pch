@@ -1,0 +1,25 @@
+/**
+ * Copyright © 2015-2016 NTT DOCOMO, INC. All Rights Reserved.
+ */
+
+#ifndef BLE_PrefixHeader_pch
+#define BLE_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define DEBUG_LOG(fmt, ...) NSLog(@"%s:%d:%@", __PRETTY_FUNCTION__,__LINE__,[NSString stringWithFormat:(fmt), ## __VA_ARGS__]);
+#else
+#define DEBUG_LOG(...)
+#endif
+
+
+#import "BLECommonConsts.h"
+#import "BLEOperationServiceConsts.h"
+#import "BLEPropertyInformationConsts.h"
+#import "BLESensorInformationConsts.h"
+#import "BLESettingOperationConsts.h"
+#import "BLENotificationConsts.h"
+
+#endif /* BLE_Samle_demo_PrefixHeader_pch */

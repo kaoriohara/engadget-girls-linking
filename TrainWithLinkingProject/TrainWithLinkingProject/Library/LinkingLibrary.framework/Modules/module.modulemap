@@ -1,0 +1,6 @@
+framework module LinkingLibrary {
+  umbrella header "LinkingLibrary.h"
+
+  export *
+  module * { export * }
+}
