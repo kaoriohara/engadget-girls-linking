@@ -13,12 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         //所要時間・距離
         print("所要時間")
         var distance:Int = 0
         var duration:Int = 0
-        let url:NSURL = NSURL(string: "https://maps.googleapis.com/maps/api/distancematrix/json?origins=35.6671414,139.7389042&destinations=35.6713878,139.7327435&mode=walking&language=ja&key=AIzaSyD5iHA_AmmALCwYBcOqqVGuGISMzeD2tIc")!
+        
+        let origin = "35.6671414,139.7389042" //赤坂アークヒルズ（アーク森ビル）
+        let destination = "35.6713878,139.7327435" //赤坂駅
+        
+        let url:NSURL = NSURL(string: "https://maps.googleapis.com/maps/api/distancematrix/json?origins="+origin + "&destinations=" + destination+"&mode=walking&language=ja&key=AIzaSyD5iHA_AmmALCwYBcOqqVGuGISMzeD2tIc")!
         let jsonData = NSData(contentsOfURL: url)!
         do {
             let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
@@ -34,13 +37,14 @@ class ViewController: UIViewController {
         }catch{
             
         }
-        let timeForWalking:Double = Double(Double(distance)/78)
-        let timeForFastWalking:Double = Double(Double(distance)/83)
-        let timeForRunning:Double = Double(Double(distance)/100)
+        let timeForWalking:Float = Float(Double(distance)/78)
+        let timeForFastWalking:Float = Float(Double(distance)/83)
+        let timeForRunning:Float = Float(Double(distance)/100)
         
 //        徒歩 4.7kg/h -> 4700 m/h -> 4700 / 60 m/m  -> 78 m/m
 //        S2：早歩き5km/h -> 5000m/h -> 5000 / 60 m/m  ->  83 m/m
 //        S3：駆け足6km/h -> 6000m/h -> 6000 / 60 m/m  ->  100 m/m
+//        google distancematrix api limit!! 2500 request/day
 
         //所要時間・距離の取得
         print("所要時間（徒歩）：分");
