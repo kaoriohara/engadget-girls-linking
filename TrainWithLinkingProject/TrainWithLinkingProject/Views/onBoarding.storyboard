@@ -1,7 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="mB6-g3-WyE">
+            <objects>
+                <viewController id="ern-ze-UNz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MSj-5s-7MX"/>
+                        <viewControllerLayoutGuide type="bottom" id="lGj-DJ-F8j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="isl-Zx-a3n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lS-Vm-afo">
+                                <rect key="frame" x="0.0" y="304" width="600" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="ngI-7h-mU4"/>
+                                </constraints>
+                                <string key="text">もう、電車やバスを
+僅差で逃さない</string>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMe-Ri-Ijt">
+                                <rect key="frame" x="240" y="267" width="120" height="1"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="P5V-qw-NK2"/>
+                                    <constraint firstAttribute="height" constant="1" id="iUo-bN-M7b"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rr-Nx-yrR">
+                                <rect key="frame" x="20" y="523" width="560" height="44"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.84705882352941175" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xfA-69-HXP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onBoardingLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="V0Z-I7-bHu">
+                                <rect key="frame" x="180" y="191" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="qBX-9K-0n3"/>
+                                    <constraint firstAttribute="height" constant="40" id="xiK-aJ-uVV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uMe-Ri-Ijt" firstAttribute="top" secondItem="V0Z-I7-bHu" secondAttribute="bottom" constant="36" id="6GP-q6-O9t"/>
+                            <constraint firstItem="V0Z-I7-bHu" firstAttribute="centerX" secondItem="isl-Zx-a3n" secondAttribute="centerX" id="7VD-Ob-0q6"/>
+                            <constraint firstItem="3rr-Nx-yrR" firstAttribute="leading" secondItem="isl-Zx-a3n" secondAttribute="leading" constant="20" id="9hm-Uv-sS9"/>
+                            <constraint firstItem="lGj-DJ-F8j" firstAttribute="top" secondItem="3rr-Nx-yrR" secondAttribute="bottom" constant="33" id="EBo-NM-LkK"/>
+                            <constraint firstItem="5lS-Vm-afo" firstAttribute="top" secondItem="uMe-Ri-Ijt" secondAttribute="bottom" constant="36" id="EZB-0c-WVF"/>
+                            <constraint firstItem="uMe-Ri-Ijt" firstAttribute="centerX" secondItem="isl-Zx-a3n" secondAttribute="centerX" id="R9o-h0-A4d"/>
+                            <constraint firstAttribute="trailing" secondItem="3rr-Nx-yrR" secondAttribute="trailing" constant="20" id="cqK-Bx-64V"/>
+                            <constraint firstItem="V0Z-I7-bHu" firstAttribute="top" secondItem="MSj-5s-7MX" secondAttribute="bottom" constant="171" id="eFs-2D-bre"/>
+                            <constraint firstItem="3rr-Nx-yrR" firstAttribute="centerX" secondItem="isl-Zx-a3n" secondAttribute="centerX" id="fT8-DF-lgP"/>
+                            <constraint firstItem="5lS-Vm-afo" firstAttribute="centerX" secondItem="isl-Zx-a3n" secondAttribute="centerX" id="l6H-wx-TRe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmV-61-cL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="390"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onBoardingLogo.png" width="484" height="80"/>
+    </resources>
 </document>
