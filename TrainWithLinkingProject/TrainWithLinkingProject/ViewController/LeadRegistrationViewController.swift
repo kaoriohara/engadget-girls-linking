@@ -11,7 +11,7 @@ class LeadRegistrationViewController: BWWalkthroughPageViewController {
 
     @IBAction func RegistAction(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Registration", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController()!
+        let viewController:RegistrationPrefecture = storyboard.instantiateInitialViewController() as! RegistrationPrefecture
         self.presentViewController(viewController, animated: true, completion: nil)
         
     }

@@ -20,6 +20,8 @@
 		070A38181CA4C9350021919E /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A38161CA4C9350021919E /* BWWalkthroughViewController.swift */; };
 		070A381A1CA4CD320021919E /* TurtorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A38191CA4CD320021919E /* TurtorialViewController.swift */; };
 		070A381C1CA4DD210021919E /* LeadRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A381B1CA4DD210021919E /* LeadRegistrationViewController.swift */; };
+		070A381E1CA4E34D0021919E /* RegistrationPrefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A381D1CA4E34D0021919E /* RegistrationPrefecture.swift */; };
+		070A38201CA535BE0021919E /* RegisterCitizenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A381F1CA535BE0021919E /* RegisterCitizenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,8 @@
 		070A38161CA4C9350021919E /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BWWalkthroughViewController.swift; path = Setting/BWWalkthroughViewController.swift; sourceTree = "<group>"; };
 		070A38191CA4CD320021919E /* TurtorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurtorialViewController.swift; path = ViewController/TurtorialViewController.swift; sourceTree = "<group>"; };
 		070A381B1CA4DD210021919E /* LeadRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeadRegistrationViewController.swift; path = ViewController/LeadRegistrationViewController.swift; sourceTree = "<group>"; };
+		070A381D1CA4E34D0021919E /* RegistrationPrefecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationPrefecture.swift; path = ViewController/RegistrationPrefecture.swift; sourceTree = "<group>"; };
+		070A381F1CA535BE0021919E /* RegisterCitizenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterCitizenViewController.swift; path = ViewController/RegisterCitizenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				070A37F11C950FCF0021919E /* ViewController.swift */,
 				070A38191CA4CD320021919E /* TurtorialViewController.swift */,
 				070A381B1CA4DD210021919E /* LeadRegistrationViewController.swift */,
+				070A381D1CA4E34D0021919E /* RegistrationPrefecture.swift */,
+				070A381F1CA535BE0021919E /* RegisterCitizenViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -218,11 +224,13 @@
 			files = (
 				070A37FB1C95111A0021919E /* AppDelegate.swift in Sources */,
 				070A38171CA4C9350021919E /* BWWalkthroughPageViewController.swift in Sources */,
+				070A38201CA535BE0021919E /* RegisterCitizenViewController.swift in Sources */,
 				070A38181CA4C9350021919E /* BWWalkthroughViewController.swift in Sources */,
 				070A37F21C950FCF0021919E /* ViewController.swift in Sources */,
 				070A37DF1C950B2A0021919E /* TrainWithLinkingProject.xcdatamodeld in Sources */,
 				070A381C1CA4DD210021919E /* LeadRegistrationViewController.swift in Sources */,
 				070A381A1CA4CD320021919E /* TurtorialViewController.swift in Sources */,
+				070A381E1CA4E34D0021919E /* RegistrationPrefecture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

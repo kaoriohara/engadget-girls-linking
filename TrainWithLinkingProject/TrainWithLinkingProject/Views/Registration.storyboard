@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Registration Prefecture-->
         <scene sceneID="yzX-nf-vAw">
             <objects>
-                <viewController id="geO-KN-fY8" sceneMemberID="viewController">
+                <viewController id="geO-KN-fY8" customClass="RegistrationPrefecture" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ng9-iB-dzM"/>
                         <viewControllerLayoutGuide type="bottom" id="wyg-rP-eAI"/>
@@ -40,18 +40,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WrD-Qj-Wym">
+                                <rect key="frame" x="94" y="113" width="59" height="30"/>
+                                <state key="normal" title="debug用"/>
+                                <connections>
+                                    <action selector="gotoCitizen:" destination="geO-KN-fY8" eventType="touchUpInside" id="DdJ-xC-R0Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="m5T-VD-f51">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ddA-HZ-Y2Q"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="prefecturePicker" destination="xl3-Ab-hTu" id="NyZ-Wx-MY6"/>
+                        <segue destination="Zwi-mt-ZM8" kind="presentation" identifier="GoToCitizen" id="Idi-u7-Wvf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0J-kt-ZBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="404"/>
+            <point key="canvasLocation" x="984" y="404"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Citizen View Controller-->
         <scene sceneID="6B0-PJ-uap">
             <objects>
-                <viewController id="Zwi-mt-ZM8" sceneMemberID="viewController">
+                <viewController id="Zwi-mt-ZM8" customClass="RegisterCitizenViewController" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Be7-KP-3KX"/>
                         <viewControllerLayoutGuide type="bottom" id="rkR-IR-Ltp"/>
@@ -86,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DG0-2j-ugD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="404"/>
+            <point key="canvasLocation" x="1793" y="404"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZZc-3F-2av">
@@ -126,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTA-gR-vxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="404"/>
+            <point key="canvasLocation" x="2414" y="404"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VTQ-v9-QXC">
@@ -170,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Y5-Wu-7Ww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2223" y="404"/>
+            <point key="canvasLocation" x="3035" y="404"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pYu-qR-QY1">
@@ -214,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Y0-b3-5Yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2843" y="404"/>
+            <point key="canvasLocation" x="3655" y="404"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wmy-vu-fk5">
@@ -258,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZo-sa-6tw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3460" y="404"/>
+            <point key="canvasLocation" x="4272" y="404"/>
         </scene>
     </scenes>
 </document>
