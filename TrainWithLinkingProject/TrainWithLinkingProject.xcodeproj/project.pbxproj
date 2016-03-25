@@ -12,7 +12,29 @@
 		070A37F41C9510080021919E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A37F31C9510080021919E /* Main.storyboard */; };
 		070A37F61C9510240021919E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A37F51C9510240021919E /* LaunchScreen.storyboard */; };
 		070A37FB1C95111A0021919E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A37FA1C95111A0021919E /* AppDelegate.swift */; };
+		070A38021C9E793B0021919E /* LinkingLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070A37F71C95103A0021919E /* LinkingLibrary.framework */; };
+		070A38031C9E793B0021919E /* LinkingLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 070A37F71C95103A0021919E /* LinkingLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		070A38131CA4C9280021919E /* onBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A38111CA4C9280021919E /* onBoarding.storyboard */; };
+		070A38141CA4C9280021919E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A38121CA4C9280021919E /* Registration.storyboard */; };
+		070A38171CA4C9350021919E /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A38151CA4C9350021919E /* BWWalkthroughPageViewController.swift */; };
+		070A38181CA4C9350021919E /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A38161CA4C9350021919E /* BWWalkthroughViewController.swift */; };
+		070A381A1CA4CD320021919E /* TurtorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A38191CA4CD320021919E /* TurtorialViewController.swift */; };
+		070A381C1CA4DD210021919E /* LeadRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A381B1CA4DD210021919E /* LeadRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		070A38041C9E793B0021919E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				070A38031C9E793B0021919E /* LinkingLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		070A37D31C950B2A0021919E /* TrainWithLinkingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainWithLinkingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +46,12 @@
 		070A37FA1C95111A0021919E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Setting/AppDelegate.swift; sourceTree = "<group>"; };
 		070A37FC1C9511690021919E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Setting/Info.plist; sourceTree = "<group>"; };
 		070A37FD1C9511690021919E /* TrainWithLinkingProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TrainWithLinkingProject-Bridging-Header.h"; path = "Setting/TrainWithLinkingProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		070A38111CA4C9280021919E /* onBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = onBoarding.storyboard; path = Views/onBoarding.storyboard; sourceTree = "<group>"; };
+		070A38121CA4C9280021919E /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = Views/Registration.storyboard; sourceTree = "<group>"; };
+		070A38151CA4C9350021919E /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BWWalkthroughPageViewController.swift; path = Setting/BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		070A38161CA4C9350021919E /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BWWalkthroughViewController.swift; path = Setting/BWWalkthroughViewController.swift; sourceTree = "<group>"; };
+		070A38191CA4CD320021919E /* TurtorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurtorialViewController.swift; path = ViewController/TurtorialViewController.swift; sourceTree = "<group>"; };
+		070A381B1CA4DD210021919E /* LeadRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeadRegistrationViewController.swift; path = ViewController/LeadRegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070A38021C9E793B0021919E /* LinkingLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				070A37F11C950FCF0021919E /* ViewController.swift */,
+				070A38191CA4CD320021919E /* TurtorialViewController.swift */,
+				070A381B1CA4DD210021919E /* LeadRegistrationViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -85,6 +116,8 @@
 		070A37F01C950E460021919E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				070A38111CA4C9280021919E /* onBoarding.storyboard */,
+				070A38121CA4C9280021919E /* Registration.storyboard */,
 				070A37F51C9510240021919E /* LaunchScreen.storyboard */,
 				070A37F31C9510080021919E /* Main.storyboard */,
 			);
@@ -94,6 +127,8 @@
 		070A37F91C9510F80021919E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				070A38151CA4C9350021919E /* BWWalkthroughPageViewController.swift */,
+				070A38161CA4C9350021919E /* BWWalkthroughViewController.swift */,
 				070A37FC1C9511690021919E /* Info.plist */,
 				070A37FD1C9511690021919E /* TrainWithLinkingProject-Bridging-Header.h */,
 				070A37FA1C95111A0021919E /* AppDelegate.swift */,
@@ -118,6 +153,7 @@
 				070A37CF1C950B2A0021919E /* Sources */,
 				070A37D01C950B2A0021919E /* Frameworks */,
 				070A37D11C950B2A0021919E /* Resources */,
+				070A38041C9E793B0021919E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,7 +176,6 @@
 				TargetAttributes = {
 					070A37D21C950B2A0021919E = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = AEQF6N9D4R;
 					};
 				};
 			};
@@ -168,7 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				070A37F41C9510080021919E /* Main.storyboard in Resources */,
+				070A38141CA4C9280021919E /* Registration.storyboard in Resources */,
 				070A37F61C9510240021919E /* LaunchScreen.storyboard in Resources */,
+				070A38131CA4C9280021919E /* onBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				070A37FB1C95111A0021919E /* AppDelegate.swift in Sources */,
+				070A38171CA4C9350021919E /* BWWalkthroughPageViewController.swift in Sources */,
+				070A38181CA4C9350021919E /* BWWalkthroughViewController.swift in Sources */,
 				070A37F21C950FCF0021919E /* ViewController.swift in Sources */,
 				070A37DF1C950B2A0021919E /* TrainWithLinkingProject.xcdatamodeld in Sources */,
+				070A381C1CA4DD210021919E /* LeadRegistrationViewController.swift in Sources */,
+				070A381A1CA4CD320021919E /* TurtorialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +317,8 @@
 		070A37E91C950B2A0021919E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -283,15 +326,17 @@
 				);
 				INFOPLIST_FILE = TrainWithLinkingProject/Setting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uu.TrainWithLinkingProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uu.MapApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cde686d2-599b-4e88-8776-6dbd84dfca50";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		070A37EA1C950B2A0021919E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -299,9 +344,9 @@
 				);
 				INFOPLIST_FILE = TrainWithLinkingProject/Setting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uu.TrainWithLinkingProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uu.MapApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cde686d2-599b-4e88-8776-6dbd84dfca50";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -324,6 +369,7 @@
 				070A37EA1C950B2A0021919E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

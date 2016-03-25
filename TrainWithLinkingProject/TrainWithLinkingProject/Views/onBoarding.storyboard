@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QKH-cn-pXa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Walkthrough View Controller-->
+        <scene sceneID="ofw-kM-nUA">
+            <objects>
+                <viewController storyboardIdentifier="walk100" id="QKH-cn-pXa" customClass="BWWalkthroughViewController" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0f9-gH-1Gb"/>
+                        <viewControllerLayoutGuide type="bottom" id="h7r-gl-zzS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pqx-bE-evD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXk-69-hqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="420"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="6fd-o1-GC3">
             <objects>
-                <viewController storyboardIdentifier="walk0" id="fwT-5h-JSq" customClass="ViewController" customModule="colorSignal" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk0" id="fwT-5h-JSq" customClass="BWWalkthroughPageViewController" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iId-Mg-P18"/>
                         <viewControllerLayoutGuide type="bottom" id="oyG-63-gC0"/>
@@ -48,7 +66,7 @@
         <!--Walkthrough Page View Controller-->
         <scene sceneID="0Hs-BB-J9Z">
             <objects>
-                <viewController storyboardIdentifier="walk1" id="9si-A0-bZK" customClass="BWWalkthroughPageViewController" customModule="colorSignal" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk1" id="9si-A0-bZK" customClass="BWWalkthroughPageViewController" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nX9-ju-u4k"/>
                         <viewControllerLayoutGuide type="bottom" id="RX9-yA-baN"/>
@@ -92,7 +110,7 @@
         <!--Walkthrough Page View Controller-->
         <scene sceneID="3u2-SX-cNZ">
             <objects>
-                <viewController storyboardIdentifier="walk2" id="rUu-Cd-k13" customClass="BWWalkthroughPageViewController" customModule="colorSignal" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk2" id="rUu-Cd-k13" customClass="BWWalkthroughPageViewController" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9SP-uf-93m"/>
                         <viewControllerLayoutGuide type="bottom" id="yhU-vh-2BG"/>
@@ -136,7 +154,7 @@
         <!--Walkthrough Page View Controller-->
         <scene sceneID="UGS-7h-qsc">
             <objects>
-                <viewController storyboardIdentifier="walk3" id="Ll8-aR-RIU" customClass="BWWalkthroughPageViewController" customModule="colorSignal" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk3" id="Ll8-aR-RIU" customClass="BWWalkthroughPageViewController" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rzc-Vp-FfO"/>
                         <viewControllerLayoutGuide type="bottom" id="r5D-Eo-San"/>
@@ -177,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="2297" y="420"/>
         </scene>
-        <!--Walkthrough Page View Controller-->
+        <!--Lead Registration View Controller-->
         <scene sceneID="sdC-iT-1tb">
             <objects>
-                <viewController storyboardIdentifier="walk4" id="Mbh-7D-EHu" customClass="BWWalkthroughPageViewController" customModule="colorSignal" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk4" id="Mbh-7D-EHu" customClass="LeadRegistrationViewController" customModule="TrainWithLinkingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nnR-MK-7Ng"/>
                         <viewControllerLayoutGuide type="bottom" id="EIM-G4-dAM"/>
@@ -206,6 +224,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
                                 <state key="normal" title="登録を開始"/>
                                 <connections>
+                                    <action selector="RegistAction:" destination="Mbh-7D-EHu" eventType="touchUpInside" id="sG4-Lu-FOb"/>
                                     <action selector="showWalkthroughButtonPressed" destination="fwT-5h-JSq" eventType="touchUpInside" id="gfY-cC-t5p"/>
                                 </connections>
                             </button>
