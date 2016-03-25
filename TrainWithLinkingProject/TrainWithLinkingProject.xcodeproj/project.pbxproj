@@ -12,6 +12,10 @@
 		070A37F41C9510080021919E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A37F31C9510080021919E /* Main.storyboard */; };
 		070A37F61C9510240021919E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070A37F51C9510240021919E /* LaunchScreen.storyboard */; };
 		070A37FB1C95111A0021919E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A37FA1C95111A0021919E /* AppDelegate.swift */; };
+		A7784E291CA52564008D7731 /* onBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7784E281CA52564008D7731 /* onBoarding.storyboard */; };
+		A7784E2B1CA52570008D7731 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7784E2A1CA52570008D7731 /* Registration.storyboard */; };
+		A7784E351CA52624008D7731 /* onBoardingLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A7784E341CA52624008D7731 /* onBoardingLogo.png */; };
+		A7784E371CA5262E008D7731 /* splashLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A7784E361CA5262E008D7731 /* splashLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		070A37FA1C95111A0021919E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Setting/AppDelegate.swift; sourceTree = "<group>"; };
 		070A37FC1C9511690021919E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Setting/Info.plist; sourceTree = "<group>"; };
 		070A37FD1C9511690021919E /* TrainWithLinkingProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TrainWithLinkingProject-Bridging-Header.h"; path = "Setting/TrainWithLinkingProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7784E281CA52564008D7731 /* onBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = onBoarding.storyboard; path = Views/onBoarding.storyboard; sourceTree = "<group>"; };
+		A7784E2A1CA52570008D7731 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = Views/Registration.storyboard; sourceTree = "<group>"; };
+		A7784E341CA52624008D7731 /* onBoardingLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onBoardingLogo.png; sourceTree = "<group>"; };
+		A7784E361CA5262E008D7731 /* splashLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		070A37D51C950B2A0021919E /* TrainWithLinkingProject */ = {
 			isa = PBXGroup;
 			children = (
+				A7784E2D1CA525C8008D7731 /* image */,
 				070A37FF1C957D0B0021919E /* Resource */,
 				070A37F91C9510F80021919E /* Settings */,
 				070A37F01C950E460021919E /* Views */,
@@ -85,6 +94,8 @@
 		070A37F01C950E460021919E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7784E2A1CA52570008D7731 /* Registration.storyboard */,
+				A7784E281CA52564008D7731 /* onBoarding.storyboard */,
 				070A37F51C9510240021919E /* LaunchScreen.storyboard */,
 				070A37F31C9510080021919E /* Main.storyboard */,
 			);
@@ -106,6 +117,15 @@
 			children = (
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		A7784E2D1CA525C8008D7731 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A7784E341CA52624008D7731 /* onBoardingLogo.png */,
+				A7784E361CA5262E008D7731 /* splashLogo.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				070A37F41C9510080021919E /* Main.storyboard in Resources */,
+				A7784E371CA5262E008D7731 /* splashLogo.png in Resources */,
+				A7784E2B1CA52570008D7731 /* Registration.storyboard in Resources */,
 				070A37F61C9510240021919E /* LaunchScreen.storyboard in Resources */,
+				A7784E351CA52624008D7731 /* onBoardingLogo.png in Resources */,
+				A7784E291CA52564008D7731 /* onBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +348,7 @@
 				070A37EA1C950B2A0021919E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
