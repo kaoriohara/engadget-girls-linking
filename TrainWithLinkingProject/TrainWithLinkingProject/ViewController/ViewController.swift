@@ -14,6 +14,7 @@ class ViewController: UIViewController ,BLEConnecterDelegate{
     var device:BLEDeviceSetting?
     var peripheral:CBPeripheral?
     var canLighting:Bool?
+    var targetTrainTime:NSDate?
 
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var connectButton: UIButton!
@@ -31,27 +32,69 @@ class ViewController: UIViewController ,BLEConnecterDelegate{
         //現在時刻
         let nowFormatter = NSDateFormatter()
         nowFormatter.dateFormat = "HH:mm"
-        let nowTime = nowFormatter.stringFromDate(NSDate())
+        let nowTime = NSDate()
+        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
+        let comps:NSDateComponents = (calendar?.components([.Year, .Month, .Day, .Hour, .Minute], fromDate: nowTime))!
+        //parameter はかおりさんのものを入れる
+        let afterTen = NSDate(timeIntervalSinceNow: 60*10+60*60*9)
         print("現在時刻")
-        print(nowTime)
-
-        getTrainTime()
-//        getPrefecture()
+        let trainData:NSArray = getTrainTime()
+        
+        for i in 0..<trainData.count{
+            let timeStr = trainData[i] as! String
+            let a = timeStr.characters.split{$0 == ":"}.map(String.init)
+            comps.hour = Int(a[0])!
+            comps.minute = Int(a[1])!
+            var traintime = calendar?.dateFromComponents(comps)
+            traintime = NSDate(timeInterval: 60*60*9, sinceDate: traintime!)
+            let targetTime:NSDate;
+            if afterTen.compare(traintime!) == NSComparisonResult.OrderedAscending{
+                print("まだいける！")
+                targetTrainTime = traintime!
+                break
+            }else{
+                print("過ぎてる")
+            }
+        }
+        
+        print(targetTrainTime)
+        
+        
+        
+//        for( i =0; i<trainData.length; i++){
+//            if (nowtime+10 < getTrainTime[i])
+//                i++
+//            else if( nowtime+10 > getTrainTime[i])
+//                Train_t = getTrainTime[i]
+//            break;
+//        }
+//        print("Train_t")
+//        print(Train_t)
+//        
+//        if( nowtime+12 > Train_t)
+        
+        
         
    }
     
-    func getPrefecture(){
-        let prefectureUrl:NSURL = NSURL(string: "http://geoapi.heartrails.com/api/xml?method=getPrefectures")!
-        let prefectureJsonData = NSData(contentsOfURL: prefectureUrl)!
-        do{
-            let json = try NSJSONSerialization.JSONObjectWithData(prefectureJsonData, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-            let dict = json.objectAtIndex(0)
-        }catch{
-            
-        }
+    func didFailToConnectPeripheral(peripheral: CBPeripheral!, error: NSError!) {
+        
     }
     
-    func getTrainTime(){
+    func didConnectDevice(setting: BLEDeviceSetting!) {
+//        MARK:ここで次の電車まで何分あるかによって色の指定をする
+        
+        
+//        settingColorNumber = 2 キミドリ
+//        settingColorNumber = 3 オレンジ
+        
+        //settingColorNumberで色指定
+        setting.settingInformationDataLED .setObject(1, forKey: "settingColorNumber")
+        print(setting.settingInformationDataLED)
+    }
+    
+    
+    func getTrainTime() -> NSMutableArray{
         //時刻表
         print("時刻表")
         let timeArray:NSMutableArray = [];
@@ -63,7 +106,7 @@ class ViewController: UIViewController ,BLEConnecterDelegate{
             var timeCount = dict.count
             timeCount -= 1
             for i in 0...timeCount{
-                let time = dict.objectAtIndex(i).objectForKey("odpt:departureTime") as! String
+                let time = dict.objectAtIndex(i).objectForKey("odpt:departureTime") as! NSString
                 timeArray.addObject(time)
             }
         }catch{
@@ -71,8 +114,9 @@ class ViewController: UIViewController ,BLEConnecterDelegate{
         }
         
         //時刻表の取得
-        print(timeArray);
-
+        print(timeArray)
+        
+        return timeArray
     }
     
     func canDiscoverDevice()->Bool{
@@ -86,7 +130,6 @@ class ViewController: UIViewController ,BLEConnecterDelegate{
         }
     }
     
-    //
     @IBAction func connectButton(sender: AnyObject) {
         self.connecter?.connectDevice(self.peripheral)
     }
@@ -94,17 +137,15 @@ class ViewController: UIViewController ,BLEConnecterDelegate{
     //押したら光る
     @IBAction func lightButton(sender: AnyObject) {
         if ((self.device?.deviceId) != nil){
-            
-            //赤色
             BLERequestController.sharedInstance().sendGeneralInformation(nil, text: nil, appName: nil, appNameLocal: nil, package: nil, notifyId: 0, notifyCategoryId: 0, ledSetting: true, vibrationSetting: false, led: nil, vibration: nil, deviceId: (self.device?.deviceId)!, deviceUId: nil, peripheral: self.peripheral, disconnect: false)
-
         }
     }
     
     
     //デバイス検索が成功したときに呼ばれるデリゲート
     func didDiscoverPeripheral(peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
-        if peripheral.name == peripheral.name{
+        print(peripheral.name)
+        if peripheral.name == "Linking Board32932"{
             self.device = self.connecter?.getDeviceByPeripheral(peripheral)
             self.peripheral = peripheral
             self.connectButton.enabled = true;
