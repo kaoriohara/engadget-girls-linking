@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QKH-cn-pXa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QKH-cn-pXa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -35,28 +35,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaI-Pw-cYw">
-                                <rect key="frame" x="246" y="550" width="108" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAi-rG-qrr">
+                                <rect key="frame" x="20" y="294" width="560" height="60"/>
+                                <string key="text">もう、電車やバスを
+僅差で逃さない</string>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <state key="normal" title="START"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enB-mJ-8DG">
+                                <rect key="frame" x="234" y="257" width="120" height="1"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Wb4-cW-hXS"/>
+                                    <constraint firstAttribute="height" constant="1" id="gQr-q8-sdA"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardingLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="A2c-vh-LD0">
+                                <rect key="frame" x="174" y="180" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="46f-4q-6rS"/>
+                                    <constraint firstAttribute="height" constant="40" id="cgA-MR-qD2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaI-Pw-cYw">
+                                <rect key="frame" x="20" y="536" width="560" height="44"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Mii-X2-1lc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="showWalkthroughButtonPressed" destination="fwT-5h-JSq" eventType="touchUpInside" id="G5c-bC-JoO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COLOR SIGNAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAM-o4-ava">
-                                <rect key="frame" x="20" y="261" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="もう電車やバスを僅差で逃さない。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAi-rG-qrr">
-                                <rect key="frame" x="20" y="309" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jaI-Pw-cYw" firstAttribute="centerX" secondItem="9bL-vK-bdO" secondAttribute="centerX" id="4eE-ht-kt9"/>
+                            <constraint firstAttribute="trailing" secondItem="jaI-Pw-cYw" secondAttribute="trailing" constant="20" id="AFb-Ho-rgs"/>
+                            <constraint firstItem="oyG-63-gC0" firstAttribute="top" secondItem="jaI-Pw-cYw" secondAttribute="bottom" constant="20" id="Dfb-9m-rx1"/>
+                            <constraint firstItem="A2c-vh-LD0" firstAttribute="centerX" secondItem="9bL-vK-bdO" secondAttribute="centerX" id="PSA-jC-NPE"/>
+                            <constraint firstItem="jaI-Pw-cYw" firstAttribute="leading" secondItem="9bL-vK-bdO" secondAttribute="leading" constant="20" id="WLu-NY-V1v"/>
+                            <constraint firstItem="EAi-rG-qrr" firstAttribute="top" secondItem="enB-mJ-8DG" secondAttribute="bottom" constant="36" id="aN8-f7-gNv"/>
+                            <constraint firstItem="A2c-vh-LD0" firstAttribute="top" secondItem="iId-Mg-P18" secondAttribute="bottom" constant="160" id="bZG-Yp-DE5"/>
+                            <constraint firstItem="enB-mJ-8DG" firstAttribute="centerX" secondItem="9bL-vK-bdO" secondAttribute="centerX" id="hjS-5T-JGH"/>
+                            <constraint firstItem="enB-mJ-8DG" firstAttribute="top" secondItem="A2c-vh-LD0" secondAttribute="bottom" constant="36" id="j0x-3A-vEh"/>
+                            <constraint firstItem="EAi-rG-qrr" firstAttribute="centerX" secondItem="9bL-vK-bdO" secondAttribute="centerX" id="rs2-jJ-y5y"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7d-62-xNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,32 +104,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ra-9v-9qw">
-                                <rect key="frame" x="246" y="544" width="108" height="41"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <state key="normal" title="SKIP"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ra-9v-9qw">
+                                <rect key="frame" x="246" y="544" width="108" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="showWalkthroughButtonPressed" destination="fwT-5h-JSq" eventType="touchUpInside" id="giz-US-DM1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="駅まで走る?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCG-JT-b7E">
-                                <rect key="frame" x="20" y="207" width="560" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="駅まで走る?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCG-JT-b7E">
+                                <rect key="frame" x="20" y="187" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CNy-Hc-UJf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーホルダーの色で、次の電車・バスに乗るまでのステータスをお知らせ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vj-VM-3tX">
-                                <rect key="frame" x="20" y="292" width="560" height="100"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vj-VM-3tX">
+                                <rect key="frame" x="20" y="272" width="560" height="76"/>
+                                <string key="text">キーホルダーの色で
+次の電車・バスに乗るまでの
+ステータスをお知らせ</string>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpx-bL-nlN">
-                                <rect key="frame" x="234" y="272" width="120" height="1"/>
-                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpx-bL-nlN">
+                                <rect key="frame" x="240" y="249" width="120" height="1"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="CJg-iM-Ztj"/>
+                                    <constraint firstAttribute="height" constant="1" id="wVh-LF-ZO6"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PCG-JT-b7E" firstAttribute="top" secondItem="nX9-ju-u4k" secondAttribute="bottom" constant="160" id="BjZ-jR-Fnw"/>
+                            <constraint firstItem="6Vj-VM-3tX" firstAttribute="centerX" secondItem="iK1-gh-aXo" secondAttribute="centerX" id="CDb-gM-mm1"/>
+                            <constraint firstItem="5Ra-9v-9qw" firstAttribute="centerX" secondItem="iK1-gh-aXo" secondAttribute="centerX" id="FMn-P9-B6D"/>
+                            <constraint firstItem="6Vj-VM-3tX" firstAttribute="top" secondItem="Mpx-bL-nlN" secondAttribute="bottom" constant="36" id="JZ8-bY-54q"/>
+                            <constraint firstItem="RX9-yA-baN" firstAttribute="top" secondItem="5Ra-9v-9qw" secondAttribute="bottom" constant="32" id="a54-Hk-Gvp"/>
+                            <constraint firstItem="PCG-JT-b7E" firstAttribute="centerX" secondItem="iK1-gh-aXo" secondAttribute="centerX" id="ahw-pi-3uC"/>
+                            <constraint firstItem="Mpx-bL-nlN" firstAttribute="centerX" secondItem="iK1-gh-aXo" secondAttribute="centerX" id="crK-wx-rOk"/>
+                            <constraint firstItem="Mpx-bL-nlN" firstAttribute="top" secondItem="PCG-JT-b7E" secondAttribute="bottom" constant="36" id="wqA-Eh-2gF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9K-QG-yxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,32 +170,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="緑・黄・赤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhx-Ii-hpc">
-                                <rect key="frame" x="20" y="202" width="560" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーホルダーの色で、次の電車・バスに乗るまでのステータスをお知らせ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXV-al-wds">
-                                <rect key="frame" x="20" y="287" width="560" height="100"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6n-HG-BSC">
-                                <rect key="frame" x="246" y="539" width="108" height="41"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <state key="normal" title="SKIP"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6n-HG-BSC">
+                                <rect key="frame" x="246" y="539" width="108" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Eci-FK-83G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="showWalkthroughButtonPressed" destination="fwT-5h-JSq" eventType="touchUpInside" id="82S-ia-gcZ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsc-Bi-jCb">
-                                <rect key="frame" x="234" y="267" width="120" height="1"/>
-                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="緑・黄・赤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhx-Ii-hpc">
+                                <rect key="frame" x="20" y="187" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="o8E-bh-NTy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXV-al-wds">
+                                <rect key="frame" x="20" y="272" width="560" height="77"/>
+                                <string key="text">緑: 歩いてOK
+黄: ちょっと早歩き
+赤: 走らないと間に合わない!</string>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsc-Bi-jCb">
+                                <rect key="frame" x="234" y="252" width="120" height="1"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="QwQ-aJ-LQe"/>
+                                    <constraint firstAttribute="width" constant="120" id="qEv-Uv-yfc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nhx-Ii-hpc" firstAttribute="centerX" secondItem="I2H-kR-yTs" secondAttribute="centerX" id="4u1-mp-73B"/>
+                            <constraint firstItem="nhx-Ii-hpc" firstAttribute="top" secondItem="9SP-uf-93m" secondAttribute="bottom" constant="160" id="8SH-K6-skp"/>
+                            <constraint firstItem="Tsc-Bi-jCb" firstAttribute="top" secondItem="nhx-Ii-hpc" secondAttribute="bottom" constant="36" id="IVv-9s-XXW"/>
+                            <constraint firstItem="yhU-vh-2BG" firstAttribute="top" secondItem="x6n-HG-BSC" secondAttribute="bottom" constant="32" id="MOS-Bp-DJC"/>
+                            <constraint firstItem="x6n-HG-BSC" firstAttribute="centerX" secondItem="I2H-kR-yTs" secondAttribute="centerX" id="PJd-8L-eGu"/>
+                            <constraint firstItem="YXV-al-wds" firstAttribute="centerX" secondItem="I2H-kR-yTs" secondAttribute="centerX" id="PWE-wc-Y5J"/>
+                            <constraint firstItem="Tsc-Bi-jCb" firstAttribute="centerX" secondItem="I2H-kR-yTs" secondAttribute="centerX" id="cGN-dU-pm3"/>
+                            <constraint firstItem="YXV-al-wds" firstAttribute="top" secondItem="Tsc-Bi-jCb" secondAttribute="bottom" constant="36" id="ehA-QD-C45"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzg-hA-p9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,32 +239,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リアルタイム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-ez-UH5">
-                                <rect key="frame" x="20" y="202" width="560" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーホルダーの色で、次の電車・バスに乗るまでのステータスをお知らせ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3g-Dz-vNp">
-                                <rect key="frame" x="20" y="287" width="560" height="100"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-DI-0FC">
-                                <rect key="frame" x="246" y="539" width="108" height="41"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <state key="normal" title="SKIP"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-DI-0FC">
+                                <rect key="frame" x="246" y="539" width="108" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NRJ-4K-6Oj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="showWalkthroughButtonPressed" destination="fwT-5h-JSq" eventType="touchUpInside" id="aEA-YO-At0"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-GX-xua">
-                                <rect key="frame" x="234" y="267" width="120" height="1"/>
-                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="リアルタイム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-ez-UH5">
+                                <rect key="frame" x="20" y="188" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QlP-oW-30O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3g-Dz-vNp">
+                                <rect key="frame" x="20" y="282" width="560" height="51"/>
+                                <string key="text">電車の遅延や天気予報も
+リアルタイムでアップデート</string>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-GX-xua">
+                                <rect key="frame" x="240" y="253" width="120" height="1"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DbL-Pn-LXa"/>
+                                    <constraint firstAttribute="height" constant="1" id="h90-of-l9K"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bsB-ez-UH5" firstAttribute="centerX" secondItem="YoU-ck-CzH" secondAttribute="centerX" id="5EW-ck-xaT"/>
+                            <constraint firstItem="r5D-Eo-San" firstAttribute="top" secondItem="1hG-DI-0FC" secondAttribute="bottom" constant="32" id="6BE-ka-Xia"/>
+                            <constraint firstItem="uk5-GX-xua" firstAttribute="centerX" secondItem="YoU-ck-CzH" secondAttribute="centerX" id="GZV-K9-Cq8"/>
+                            <constraint firstItem="Q3g-Dz-vNp" firstAttribute="centerX" secondItem="YoU-ck-CzH" secondAttribute="centerX" id="Mav-91-wem"/>
+                            <constraint firstItem="uk5-GX-xua" firstAttribute="top" secondItem="bsB-ez-UH5" secondAttribute="bottom" constant="36" id="QRs-Lv-2fB"/>
+                            <constraint firstItem="bsB-ez-UH5" firstAttribute="top" secondItem="rzc-Vp-FfO" secondAttribute="bottom" constant="160" id="lgY-12-n8X"/>
+                            <constraint firstItem="Q3g-Dz-vNp" firstAttribute="top" secondItem="uk5-GX-xua" secondAttribute="bottom" constant="36" id="omd-Tz-Qv9"/>
+                            <constraint firstItem="1hG-DI-0FC" firstAttribute="centerX" secondItem="YoU-ck-CzH" secondAttribute="centerX" id="zHV-aO-EBT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQ8-8q-HYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,33 +307,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="使い方は簡単" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-cA-NKe">
-                                <rect key="frame" x="20" y="202" width="560" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="使い方は簡単" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-cA-NKe">
+                                <rect key="frame" x="20" y="202" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RZb-5S-u1z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自宅住所や最寄駅などの基本情報とキーカバーをiPhoneに認識させるだけ。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-kl-a5E">
-                                <rect key="frame" x="20" y="287" width="560" height="100"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-kl-a5E">
+                                <rect key="frame" x="20" y="287" width="560" height="101"/>
+                                <string key="text">自宅住所や最寄駅などの
+基本情報登録と
+キーホルダーをiPhone
+に認識させるだけ</string>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-5J-Xfe">
-                                <rect key="frame" x="240" y="539" width="120" height="41"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
-                                <state key="normal" title="登録を開始"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-5J-Xfe">
+                                <rect key="frame" x="240" y="539" width="120" height="44"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.84705882349999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Xdw-jb-nwT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                <state key="normal" title="登録を開始">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="RegistAction:" destination="Mbh-7D-EHu" eventType="touchUpInside" id="sG4-Lu-FOb"/>
                                     <action selector="showWalkthroughButtonPressed" destination="fwT-5h-JSq" eventType="touchUpInside" id="gfY-cC-t5p"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wq5-wQ-box">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wq5-wQ-box">
                                 <rect key="frame" x="234" y="267" width="120" height="1"/>
-                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4ew-we-6Zb"/>
+                                    <constraint firstAttribute="height" constant="1" id="cPI-Ma-Ia8"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZK9-kl-a5E" firstAttribute="centerX" secondItem="qa0-Or-BRZ" secondAttribute="centerX" id="Iqv-HO-e2O"/>
+                            <constraint firstItem="ZK9-kl-a5E" firstAttribute="top" secondItem="Wq5-wQ-box" secondAttribute="bottom" constant="36" id="PJI-Oc-cLk"/>
+                            <constraint firstItem="Wq5-wQ-box" firstAttribute="centerX" secondItem="qa0-Or-BRZ" secondAttribute="centerX" id="eJX-NR-6Nq"/>
+                            <constraint firstItem="EIM-G4-dAM" firstAttribute="top" secondItem="Ox9-5J-Xfe" secondAttribute="bottom" constant="17" id="k21-4B-X9C"/>
+                            <constraint firstItem="Wq5-wQ-box" firstAttribute="top" secondItem="gNa-cA-NKe" secondAttribute="bottom" constant="36" id="kNz-gb-jME"/>
+                            <constraint firstItem="gNa-cA-NKe" firstAttribute="centerX" secondItem="qa0-Or-BRZ" secondAttribute="centerX" id="qPl-Ab-da4"/>
+                            <constraint firstItem="Ox9-5J-Xfe" firstAttribute="leading" secondItem="qa0-Or-BRZ" secondAttribute="leading" constant="20" id="t7H-p0-Eok"/>
+                            <constraint firstAttribute="trailing" secondItem="Ox9-5J-Xfe" secondAttribute="trailing" constant="22" id="uf6-TU-4yu"/>
+                            <constraint firstItem="gNa-cA-NKe" firstAttribute="top" secondItem="nnR-MK-7Ng" secondAttribute="bottom" constant="182" id="z0t-7s-sOb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSn-dz-tUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,4 +369,7 @@
             <point key="canvasLocation" x="2917" y="420"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="onBoardingLogo.png" width="484" height="80"/>
+    </resources>
 </document>
